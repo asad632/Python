@@ -1,0 +1,30 @@
+enter = ''
+started = True
+
+while True:
+    enter = input('enter-->  ').lower()
+    if enter == 'start':
+        if started:
+            print('car is already started')
+        else:
+            started=True
+            print(" the car is started")
+
+    elif enter == 'stop':
+            if not started:
+                    print('car is already stopped')
+            else:
+                started = False
+                print("the car is stoped ")
+
+    elif enter == 'quit':
+        break
+
+    elif enter == 'help':
+        print("""
+start = to start the car
+stop = to Stop the car
+quit = to finish the game 
+""")
+    else:
+        print('i dont understand the command, enter ---->> "help" ')
